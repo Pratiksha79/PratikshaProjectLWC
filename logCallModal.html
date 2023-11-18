@@ -1,0 +1,22 @@
+<template>
+    <template if:true={modal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+        class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- Modal/Popup Box LWC header here -->
+            <header class="slds-modal__header">
+                <lightning-input class="slds-m-around_medium" label="Subject" onchange={handleOnchange}
+                    value={subject}>
+                </lightning-input>
+                <lightning-input class="slds-m-around_medium" label="Comment" onchange={handleOnchange}
+                value={comment}>
+            </lightning-input>
+                <lightning-button label="cancel" onclick={handleCancel}>
+                </lightning-button>
+                <lightning-button label="Save" variant="brand" onclick={handleSave}>
+                </lightning-button>
+            </header>
+        </div>
+    </section>
+    </template>
+</template>

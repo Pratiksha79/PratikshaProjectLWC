@@ -1,0 +1,8 @@
+<template>
+    <div style="height: 300px;">
+        <lightning-datatable key-field="id" data={leads} columns={columns} onrowaction={handleRowAction} hide-checkbox-column="true">
+        </lightning-datatable>
+    </div>
+    <c-log-call-modal onlogcall={sendEmail} > 
+    </c-log-call-modal>
+</template>
